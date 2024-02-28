@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-md-4"> <br>
                 <h3>อัปเดทข้อมูลสินค้า</h3>
-                <form action="update.php" method="POST">
+                <form action="updateBD.php" method="POST">
 
                     <label for="PID">รหัสสินค้า:</label>
                     <input type="text" placeholder="PID" name="PID" required class="form-control" value="<?php echo isset($result['PID']) ? $result['PID'] : ''; ?>" readonly>
@@ -39,10 +39,6 @@
                     <br>
                     <label for="Price">ราคา:</label>
                     <input type="number" placeholder="Price" name="Price" required class="form-control" value="<?php echo isset($result['Price']) ? $result['Price'] : ''; ?>">
-                    <br>
-                    <label for="Image">Image:</label>
-                    <input type="file" name="Image" accept="image/*" class="form-control">
-                    <button type="button" onclick="document.getElementById('myImage').src=''">Clear Image</button>
                     <br>
                     <br> <button type="submit" name="submit" class="btn btn-primary" onclick="return confirm('ยืนยันการแก้ไข');">อัปเดทข้อมูล</button>
                 </form>
